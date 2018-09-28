@@ -1,0 +1,17 @@
+body {
+    background-color: #0b0f11;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color: white;
+}
+#construction {
+    background-color: #0b0f11;
+    color: white;
+    font-weight: 800;
+    font-size: xx-large;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
