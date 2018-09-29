@@ -1,12 +1,17 @@
+html {
+    background-color: #171717;
+}
+
 body {
-    background-color: #0b0f11;
+    background-color: #171717;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    color: white;
+    color: #dcdcdc;
 }
-#construction {
-    background-color: #0b0f11;
-    color: white;
+
+#center-text {
+    background-color: #171717;
+    color: #dcdcdc;
     font-weight: 800;
     font-size: xx-large;
     position: absolute;
@@ -14,4 +19,8 @@ body {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+#main-nav {
+
 }

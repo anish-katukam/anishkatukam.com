@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="helloworld.css">
+    <link rel="stylesheet" href="grid.css">
     <meta charset="UTF-8">
     <title>anish's website</title>
+    <style>
+        .container {
+            max-width: 90em;
+        }
+        @media only screen and (min-width: 76em) {
+            .content {
+                width: 58.33%;
+            }
+
+            /* 7/12 */
+            .sidebar {
+                width: 41.66%;
+            }
+
+            /* 5/12 */
+            .info {
+                width: 50%;
+            }
+        }
+    </style>
+
 </head>
 <body>
 
-<div id="construction">
-    <h1>under construction</h1>
+<div class="container">
+    <div class="row">
+        <div class="col content"> ... </div>
+        <div class="col sidebar"> ... </div>
+    </div>
 </div>
+
 </body>
+
 </html>
