@@ -1,26 +1,230 @@
+/* hack.css replacement */
+* {
+    box-sizing: border-box;
+    text-rendering: geometricPrecision;
+}
+
 html {
-    background-color: #171717;
+    font-size: 13px;
+    background-color: #151515;
+    color: #959595;
+}
+
+.grid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.cell {
+    -ms-flex: 1;
+    flex: 1;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #171717;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    color: #dcdcdc;
+    /*color: #222;*/
+    padding-bottom: 100px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5rem;
+    word-wrap: break-word;
+    max-width: 64em;
+    margin: auto;
 }
 
-#center-text {
-    background-color: #171717;
-    color: #dcdcdc;
-    font-weight: 800;
-    font-size: xx-large;
+p {
+    margin: 0 0 1.75rem;
+}
+
+a {
+    color: #959595;
+    text-decoration: none;
+    border-bottom: 1px solid #ff2e88;
+    cursor: pointer;
+}
+
+a:hover {
+    /*color: #fff;*/
+    color: #ff2e88;
+    border-bottom-style: none;
+}
+
+h2 {
+    color: #ff2e88;
+}
+
+.date {
+    /*color: #999;*/
+}
+
+.notice {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1.75rem;
+}
+
+.title, .notice > p {
+    margin-bottom: 0;
+}
+
+.notice-info {
+    /*color: #00bcd4;*/
+    /*border-color: #00bcd4;*/
+}
+
+.notice-error {
+    /*color: #f44336;*/
+    /*border-color: #f44336;*/
+}
+
+.list-item {
+    /*color: #616161;*/
+
+    display: block;
+    border-bottom: 1px solid #616161;
+}
+
+.list-item:hover, .list-item.active {
+    /*color: #000;*/
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+
+.list-item.active::after {
+    float: right;
+    content: "*";
+}
+
+.list-item:not(.active)::after {
+    float: right;
+    content: "Â»";
+}
+
+.media:not(:last-child) {
+    margin-bottom: 1.25rem;
+}
+
+.media-left {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 1rem;
+}
+
+.media-right {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 1rem;
+}
+
+.media-body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.media-heading {
+    font-size: 1.1667rem;
+    font-weight: 700;
+}
+
+.media-content {
+    margin-top: .3rem;
+}
+
+hr {
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    border: 0;
+    margin: 20px 0;
+}
+
+/************************/
+
+.mjpage {
+    font-size: 16px;
+}
+
+h1 {
+    line-height: 1.3em;
+    text-align: center;
+}
+
+@media screen and (min-width: 74.5em) {
+    .list {
+        width: 15.35em;
+        position: fixed;
+        padding-top: 3.4em;
+        transform: translateX(-17em);
+    }
+}
+
+hr.long-hr:after {
+    content: "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
     position: absolute;
-    top: 30%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    top: 0;
+    left: 0;
+    line-height: 20px;
+    width: 100%;
+    word-wrap: break-word;
 }
 
-#main-nav {
+footer {
+    position: fixed;
+    bottom: 40px;
+    height: 60px;
+    width: 100%;
+    max-width: 64em;
+}
 
+.bg {
+    background-color: white;
+    position: fixed;
+    height: 70px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+pre {
+    padding: 2rem;
+    margin: 1.75rem 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: auto;
+    white-space: pre-wrap; /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+img.pixel {
+    image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges; /* Firefox                        */
+    image-rendering: -o-crisp-edges; /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast; /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor; /* IE8+                           */
+}
+
+.content * img {
+    max-width: 100%;
+}
+
+a.plain {
+    border-bottom: none;
+    background-color: inherit;
+}
+
+a.disabled {
+    color: #999999;
+    pointer-events: none;
+    border-bottom: 1px solid #999999;
+}
+
+img.icon {
+    border-radius: 10px;
+    height: 64px;
+    width: 64px;
 }
