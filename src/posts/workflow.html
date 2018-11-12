@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128573215-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128573215-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <meta charset="UTF-8">
+    <title>anish's website</title>
+</head>
+<body>
+<nav class="list">
+    <a href="../" class="list-item active">Main</a>
+</nav>
+<div><h2 class="title">workflow</h2>
+    <br>
+    <p class="date">11.12.2018</p>
+    <div class="content">
+        <p>The hardest part about running this website should be writing. It shouldn’t be the auxiliary effort involved
+            in transpiling, categorizing, formatting, and uploading an already finished post — as it currently is.
+        </p>
+        <p>
+            I’d like to preface the following content with a note that while the focus of this website certainly won’t
+            be technical, there will be exceptions, and this is one of them.
+        </p>
+        <p>
+            Here’s the (sad excuse for a) workflow the first post went through. It was first written on Google Docs, and
+            then manually converted into HTML body text, with me creating tags and breaking/spacing lines as
+            necessary. Of course, before this, I had to create a new HTML file for it, maintaining the proper file
+            structure, updating the main page, adding the requisite &lt;head&gt; and &lt;script&gt; tags, and linking
+            its navigation bar back to the main page. Next, the server had to be updated, as did my local files, as did
+            Github.
+        </p>
+        <p>
+            It may sound bad (because it is), but it’s certainly liveable. It’s not a deal-breaking amount of effort,
+            and if I weren’t aware there were better ways to do it, I probably would have even been satisfied. The
+            unfortunate part is that better ways — much better ways — do exist.
+        </p>
+        <p>
+            Like using a prebuilt website or an existing blog creator. But that’s lame, and within apple pie limits, I
+            want to do this whole thing from scratch.
+        </p>
+        <p>
+            I’ve already automated 99% of the process of updating the server with the files I’ve got locally. I wrote a
+            tiny .bat script that uses PuTTy (SSH authentication done with Pageant, so a bit faster) to clone my local
+            files over to the server. The flaw is that it doesn’t delete old files, something I’ll have to eventually
+            address with more care than a wipe/recreate.
+        </p>
+        <p>
+            The lion’s share of future optimization lies in transforming the pretty, formatted text of Google Docs to a
+            properly templated and categorized HTML file, recreating the necessary hyperlink structure on relevant
+            pages, and updating my local storage, the server, and Github, with no more work than pushing a single
+            button.
+        </p>
+        <p>
+            Unless I’m missing something incredibly obvious, this will take a fair bit of work to get done, depending on
+            how extensible I want whatever tool I build to be. Here’s the current plan I’ve got.
+        </p>
+        <p>
+            I can start by writing in Markdown. From that, converting to HTML isn’t hard. I can locally run a converter
+            (ShowdownJS) to create the HTML body I need. From there, I can generate the rest of the necessary HTML for
+            that page using a templating engine (Liquid, probably). After I’ve got the shiny new document, I’d have to
+            update all the pages that would link to it, and update the main page. I can probably do this just using the
+            same templating engine, and this would require that most, if not all, of the pages are rewritten to be
+            intelligent templates and not the hard-coded static code they currently are.
+        </p>
+        <p>
+            After this, I’d have to automate the updating of all three (local, server, VCS) data stores, and trigger the
+            website update script I’ve already got. And after that, I could start adding all the extensibility I might
+            ever need.
+        </p>
+        <p>
+            I’ll probably create another category for coding stuff and post updates. But all that comes after the
+            aforementioned automation. I’ve got relatively little work this week, so hopefully this “manual” post is the
+            last of its kind.</p>
+
+
+    </div>
+</div>
+</body>
+</html>
